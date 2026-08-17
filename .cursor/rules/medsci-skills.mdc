@@ -1,0 +1,15 @@
+---
+description: 梁晴实验分析项目（lq-experiment-analysis）使用 MedSci Skills 做文献、统计、作图、写稿与报告规范审查。仅在处理该目录时使用，不要带到 hb-ai。
+globs: lq-experiment-analysis/**
+alwaysApply: false
+---
+
+# MedSci Skills（仅 lq-experiment-analysis）
+
+细则见 `lq-experiment-analysis/.cursor/rules/medsci-skills.mdc`。技能在仓库内 `lq-experiment-analysis/.cursor/skills/<skill>/SKILL.md`，拉代码即可用。
+
+- 工作目录限定在 `lq-experiment-analysis/`，不要改 `hb-ai/`。
+- 用户没指定阶段时，先问这一步做哪一类，等确认再动手。不要默认跑全链路。
+- 文献结论、引用、统计数字、图表解读、投稿动作若不确定，先问用户。
+- 已有 `keti/`、`answer/`、`pp/` 不要搬迁；新的统计/稿件产出写入 `data/`、`analysis/`、`manuscript/`、`qc/`。
+- 不要改用本机 `~/.claude/skills/`；以本仓库这份为准。

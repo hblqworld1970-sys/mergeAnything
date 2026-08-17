@@ -1,0 +1,37 @@
+---
+description: 梁晴实验分析项目使用 MedSci Skills 做文献、统计、作图、写稿与报告规范审查。处理 lq-experiment-analysis 时使用。
+alwaysApply: false
+---
+
+# MedSci Skills（lq-experiment-analysis）
+
+技能在本仓库 `lq-experiment-analysis/.cursor/skills/<skill>/SKILL.md`（来自 [Aperivue/medsci-skills](https://github.com/Aperivue/medsci-skills) v5.25.0）。拉代码即可用，不必在本机再装一份。
+
+## 每次请求
+
+1. 工作目录限定在 `lq-experiment-analysis/`，不要改 `hb-ai/`。
+2. 用户没指定阶段时，先问这一步做哪一类，等确认再动手。不要默认跑 `orchestrate --e2e`。
+3. 文献结论、引用、统计数字、图表解读、投稿动作若不确定，先问用户，不要编造或静默补全。
+4. 动手前先读对应 `.cursor/skills/<skill>/SKILL.md`。
+
+## 目录（不要搬已有文件）
+
+| 路径 | 用途 |
+|---|---|
+| `keti/` | 课题原始材料 |
+| `answer/` | 思路 / 分析文字产出 |
+| `pp/` | 机制图 |
+| `data/` | 分析用数据（可识别个人信息不提交） |
+| `analysis/` | 统计代码、表、图 |
+| `manuscript/` | 稿件 |
+| `qc/` | 规范审查与引用核查 |
+
+## 入口（按用户意图只选一个）
+
+- 文献与核实：`search-lit` → `verify-refs`
+- 统计：`clean-data` → `analyze-stats`
+- 发表图：`make-figures`（机制图优先用现有 `pp/` 脚本）
+- 写稿：`write-paper`
+- 规范审查：`check-reporting` → `self-review`
+
+小步单技能。全链路仅在用户明确要求且必要文件已齐时才跑。
